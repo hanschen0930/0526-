@@ -1,7 +1,5 @@
 #include "pitches.h"
 #define BTN 13
-//可變電阻是12
-//8*8LED 接腳
 #define ROW1 11
 #define ROW2 10
 #define ROW3 9
@@ -107,12 +105,10 @@ void loop() {
   }
   Serial.println(Number);
 
-  //可變電阻
   int sensorV = analogRead(12);
   Serial.println(sensorV);
   delay(1); 
 
-  //LED
   // if (Number == 0){
   //   showPattern(circle);
   // }
@@ -120,7 +116,6 @@ void loop() {
   //   showPattern(T);
   // }
  
-  //蜂鳴器
   while(Number==0 && prS!=0) {
     for (int i = 0; i < 8; i++) {
       showPattern(circle);  //LED
